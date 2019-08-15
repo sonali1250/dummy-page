@@ -1,0 +1,29 @@
+let calculateAge = function(day, month, year) {
+  let currentDate = new Date();
+        let currentYear = currentDate.getFullYear();
+        let currentMonth = currentDate.getUTCMonth() + 1;
+        let currentDay = currentDate.getUTCDate();
+        // You need to treat the cases where the year, month or day hasn't arrived yet.
+        let age = currentYear - year;
+        if (currentMonth > month) {
+            return age;
+        } else {
+            if (currentDay >= day) {
+                return age;
+            } else {
+                age--;
+                return age;
+            }
+        }
+};
+var res = calculateAge(28, 2, 1992);
+console.log(res);
+
+
+<html>
+<head></head>
+<body>
+	<script type="text/javascript" src = "myscript.js"></script>
+	
+</body>
+</html>
